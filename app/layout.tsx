@@ -19,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${nunito_sans.className} bg-very-light-gray dark:bg-dark-blue`}
+        className={`${nunito_sans.className} text-black  bg-very-light-gray dark:bg-very-dark-blue dark:text-white`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main>{children}</main>

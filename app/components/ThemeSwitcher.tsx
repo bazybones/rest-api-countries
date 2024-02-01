@@ -15,9 +15,12 @@ export const ThemeSwitcher = () => {
   }
 
   return (
-    <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+    <div
+      className="select-none"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    >
       {theme === "light" ? (
-        <span className="text-[0.675rem] md:text-[1rem] font-semibold p-1 flex md:p-2 transition-colors cursor-pointer hover:bg-gray-400 rounded-md">
+        <span className="text-[0.675rem] md:text-[1rem] font-semibold p-1 flex md:p-2 transition-colors cursor-pointer hover:bg-gray-100 rounded-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -35,7 +38,7 @@ export const ThemeSwitcher = () => {
           Dark Mode
         </span>
       ) : (
-        <span className="font-semibold text-[0.675rem] md:text-[1rem] p-1 flex md:p-2 transition-colors cursor-pointer hover:bg-black rounded-md ">
+        <span className="font-semibold text-[0.675rem] md:text-[1rem] p-1 flex md:p-2 transition-colors cursor-pointer hover:bg-gray-700 rounded-md ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
