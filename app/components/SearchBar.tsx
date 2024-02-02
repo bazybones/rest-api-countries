@@ -20,7 +20,7 @@ export default function SearchBar() {
         <path d="m21 21-4.3-4.3"></path>
       </svg>
       <input
-        className="h-14 dark:bg-dark-blue flex w-full rounded-sm border border-input bg-transparent px-3 py-1 pl-12 md:pl-20 text-md shadow-md transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 placeholder:text-md place-content-center"
+        className="h-14 dark:bg-dark-blue flex w-full rounded-sm border border-input bg-transparent px-3 py-1 pl-12 md:pl-12 lg:pl-20 text-md shadow-md transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 placeholder:text-md place-content-center"
         placeholder="Search for a country..."
       />
     </div>

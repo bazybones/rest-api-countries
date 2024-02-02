@@ -18,7 +18,7 @@ export default function CardData() {
     capital: string;
   }
   const { isPending, error, data } = useQuery({
-    queryKey: ["repoData"],
+    queryKey: ["countryData"],
     queryFn: () =>
       fetch("https://restcountries.com/v2/all").then((res) => res.json()),
   });
@@ -34,11 +34,15 @@ export default function CardData() {
             <CardContent className="p-0">
               <Skeleton className=" bg-gray-200 dark:bg-dark-gray w-full h-[10rem] rounded-none rounded-t-md" />
             </CardContent>
+
             <CardContent className="pt-5">
               <Skeleton className="bg-gray-200 dark:bg-dark-gray w-[100%] h-[1.2rem] rounded-none mt-2" />
-              <Skeleton className="bg-gray-200 dark:bg-dark-gray w-[80%] h-[0.75rem] rounded-none mt-4" />
-              <Skeleton className="bg-gray-200 dark:bg-dark-gray w-[80%] h-[0.75rem] rounded-none mt-4" />
-              <Skeleton className="bg-gray-200 dark:bg-dark-gray w-[80%] h-[0.750rem] rounded-none mt-4" />
+              {Array.from({ length: 3 }, (_, index) => (
+                <Skeleton
+                  key={index}
+                  className="bg-gray-200 dark:bg-dark-gray w-[80%] h-[0.75rem] rounded-none mt-4"
+                />
+              ))}
             </CardContent>
           </Card>
         ))}
@@ -59,10 +63,10 @@ export default function CardData() {
                 <Image
                   priority
                   width={250}
-                  height={350}
+                  height={250}
                   alt={`${item.name}-flag`}
                   src={item.flags.png}
-                  className="bg-cover  w-[100%] h-[10rem] rounded-t-md"
+                  className="aspect-square rounded-t-md"
                 />
               </div>
               <CardContent className="pt-5">
